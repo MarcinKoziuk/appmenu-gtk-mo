@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+
+LDFLAGS += -Wl,-z,defs -Wl,--as-needed
+
+binary-predeb/appmenu-gtk::
+	find debian/appmenu-gtk/usr/lib -name \*.la -exec rm {} \;
+	find debian/appmenu-gtk/usr/lib -name \*.a -exec rm {} \;

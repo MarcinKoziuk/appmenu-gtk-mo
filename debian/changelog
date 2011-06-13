@@ -1,0 +1,412 @@
+appmenu-gtk (0.2.1-0ubuntu3) natty; urgency=low
+
+  * Backport more emacs variant blacklists: emacs23 and emacs23-lucid.
+    Still for bug 673302.
+
+ -- Michael Terry <mterry@ubuntu.com>  Wed, 20 Apr 2011 15:40:01 -0400
+
+appmenu-gtk (0.2.1-0ubuntu2) natty; urgency=low
+
+  * Backport changes from trunk:
+    * Blacklist emacs (bug 673302 records its problems with dynamic
+      menus)
+
+ -- Michael Terry <mterry@ubuntu.com>  Fri, 15 Apr 2011 15:52:10 -0400
+
+appmenu-gtk (0.2.1-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    * Fixing canceling and registering so that desktop menus show
+      for more users. (LP: #733050)
+
+ -- Ted Gould <ted@ubuntu.com>  Thu, 14 Apr 2011 16:01:02 -0500
+
+appmenu-gtk (0.2.0-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    * Version bump
+
+ -- Ted Gould <ted@ubuntu.com>  Wed, 23 Mar 2011 22:00:20 -0500
+
+appmenu-gtk (0.1.96-0ubuntu1) natty; urgency=low
+
+  [ Ted Gould ]
+  * New upstream release.
+    ∘ Make the registration of application windows cancelable
+      (LP: #729065)
+    ∘ Check to make sure toplevel hasn't died (LP: #726388)
+    ∘ Fix showing items so that they show when mnemonic is
+      pressed (LP: #729203)
+
+  [ Ken VanDine ]
+  * debian/control
+    - bumped build depends for dbusmenu to 0.3.101
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 10 Mar 2011 15:22:53 -0500
+
+appmenu-gtk (0.1.95-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    * Fix LP: #718926 - Some apps don't integrate to appmenu after having 
+      their windows closed
+    * Change the dbusmenu status when pressing the modifier
+    * Set the text direction of GTK has it set
+  * debian/patches: Removed as they're upstream
+
+ -- Ted Gould <ted@ubuntu.com>  Thu, 03 Mar 2011 14:18:10 -0600
+
+appmenu-gtk (0.1.94-0ubuntu2) natty; urgency=low
+
+  * Fix LP: #718926 - Some apps don't integrate to appmenu after having 
+    their windows closed
+    - add debian/patches/connect-to-map-unmap.patch
+    - add debian/patches/series
+    - update debian/control
+    - update debian/rules
+
+ -- Chris Coulson <chris.coulson@canonical.com>  Tue, 01 Mar 2011 14:48:26 +0000
+
+appmenu-gtk (0.1.94-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    ∘ Check for existence of the menu-proxy before using it (LP: #674047)
+    ∘ Black list Eclipse for now
+
+ -- Ted Gould <ted@ubuntu.com>  Thu, 17 Feb 2011 14:38:10 -0600
+
+appmenu-gtk (0.1.93-0ubuntu2) natty; urgency=low
+
+  * debian/rules
+    - Don't include static libs in the package (LP: #625687)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 14 Feb 2011 09:07:33 -0500
+
+appmenu-gtk (0.1.93-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    * Protect variant from being unref'd when NULL (LP: #703988)
+    * Check to see if the item is already realized and parse
+      immediately if it is.
+
+ -- Ted Gould <ted@ubuntu.com>  Fri, 11 Feb 2011 09:40:27 -0600
+
+appmenu-gtk (0.1.92-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    * Remove shotwell from blacklist
+
+ -- Ted Gould <ted@ubuntu.com>  Thu, 03 Feb 2011 14:22:05 -0600
+
+appmenu-gtk (0.1.91-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+    * Now using the dbusmenu parser
+  * debian/control: Increasing dbusmenu depends to 0.3.94
+
+ -- Ted Gould <ted@ubuntu.com>  Thu, 27 Jan 2011 14:34:59 -0600
+
+appmenu-gtk (0.1.90-0ubuntu1) natty; urgency=low
+
+  [ Ted Gould ]
+  * New upstream release.
+    * GDBus Port
+    * Change dbus names from ayatana.org to canonical.com
+  * Remove patches, they're upstream.
+
+  [ Ken VanDine ]
+  * debian/control
+    - Bumped build depends for dbusmenu to >= 0.3.91
+    - Dropped build depends for libdbus-glib-1-dev
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 14 Jan 2011 12:08:59 -0600
+
+appmenu-gtk (0.1.9-0ubuntu6) natty; urgency=low
+
+  * debian/control
+    - Bump build depends for libdbusmenu-glib-dev and libdbusmenu-gtk-dev 
+      to >= 0.3.90
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 09 Dec 2010 10:30:11 -0500
+
+appmenu-gtk (0.1.9-0ubuntu5) natty; urgency=low
+
+  * debian/patches/do_not_show_duplicate_menus.patch:
+    - do not show duplicate menu items (LP: #655241)
+
+ -- Omer Akram <om26er@ubuntu.com>  Wed, 24 Nov 2010 21:12:55 +0500
+
+appmenu-gtk (0.1.9-0ubuntu4) maverick; urgency=low
+
+  * cherry-picked from upstream:
+    - show gedit plugins menu (LP: #646794)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Thu, 30 Sep 2010 18:24:53 +0200
+
+appmenu-gtk (0.1.9-0ubuntu3) maverick; urgency=low
+
+  * cherry-picked from upstream:
+    - blacklist shotwell run now as there are no proper fix to get it working
+      with appmenu af of today (LP: #651307)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Wed, 29 Sep 2010 19:46:23 +0200
+
+appmenu-gtk (0.1.9-0ubuntu2) maverick; urgency=low
+
+  * Backport upstream fix:
+    - Paste in global application menu is not active whilst using
+      gnome-terminal (LP: #630292)
+
+ -- Didier Roche <didrocks@ubuntu.com>  Thu, 23 Sep 2010 21:08:40 +0200
+
+appmenu-gtk (0.1.9-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+    - Fix for menuitem caching in rebuild_item() (LP: #636962)
+  * debian/patches/fix_toplevel_destroy.patch
+    - Dropped, fixed upstream
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 13 Sep 2010 15:13:51 -0400
+
+appmenu-gtk (0.1.8-0ubuntu2) maverick; urgency=low
+
+  * debian/patches/fix_toplevel_destroy.patch 
+    - Fix toplevel_destroyed() callback to be disconnected from a previous 
+      window before it gets connected to a new one.
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 09 Sep 2010 14:28:14 -0400
+
+appmenu-gtk (0.1.8-0ubuntu1) maverick; urgency=low
+
+  * New upstream version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 09 Sep 2010 19:21:52 +0200
+
+appmenu-gtk (0.1.7-0ubuntu2) maverick; urgency=low
+
+  * Backport trunk commit to fix crashers (lp: #624607, #625885, #628672)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 31 Aug 2010 22:48:38 +0200
+
+appmenu-gtk (0.1.7-0ubuntu1) maverick; urgency=low
+
+  * New upstream version.
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 26 Aug 2010 22:43:58 +0200
+
+appmenu-gtk (0.1.6-0ubuntu1) maverick; urgency=low
+
+  * New upstream version:
+   - Performance improvements
+   - Fix issues where some menuitems were not showing sensitivity accurately
+  * debian/control: updated standards version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 24 Aug 2010 16:52:13 +0200
+
+appmenu-gtk (0.1.4-0ubuntu1) maverick; urgency=low
+
+  * New upstream version
+  * debian/patches/lp_610083.patch:
+    - dropped, the change is in the new version
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 10 Aug 2010 15:32:50 +0200
+
+appmenu-gtk (0.1.3-0ubuntu3) maverick; urgency=low
+
+  * debian/patches/lp_610083.patch
+    - Blacklist thunderbird until we can find a proper fix to prevent
+      thunderbird from crashing on startup. (LP: #610083)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Mon, 26 Jul 2010 10:16:54 -0400
+
+appmenu-gtk (0.1.3-0ubuntu2) maverick; urgency=low
+
+  * src/bridge.c
+    - Cherry picked fix for menus appearing randomly (LP: #608967)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 23 Jul 2010 12:06:05 +0200
+
+appmenu-gtk (0.1.3-0ubuntu1) maverick; urgency=low
+
+  * New upstream release 
+    - DBus name change, s/WindowMenu/AppMenu/g
+    - Adds fallback code in case indicator-appmenu applet is not available 
+      (and APPMENU_DISPLAY_BOTH is not set to 1), and for when the 
+      applet vanishes and reappears. (LP: #607285)
+  * debian/control
+    - Added a conflicts for indicator-appmenu (<< 0.0.9)
+    - Increased build depends version for dbusmenu and libgtk2.0-dev
+    - Added explict Depends on libgtk2.0-0(>= 2.21.2-0ubuntu6)
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 22 Jul 2010 15:29:10 +0200
+
+appmenu-gtk (0.1.1-0ubuntu1) maverick; urgency=low
+
+  * New upstream version:
+    - [Master] Confusion between dot and check markers in menu items
+    - doesn't display icons
+    - Menus in gnome-panel are not visible if APPMENU_DISPLAY_BOTH=0
+    - APPMENU_DISPLAY_BOTH=0 hides items in the panel menu applet
+    - Getting lots of command-line errors when running GIMP 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 08 Jul 2010 19:24:27 +0200
+
+appmenu-gtk (0.1.0-0ubuntu2) maverick; urgency=low
+
+  * Backport upstream changes to fix issues with pixbufs images not being 
+    displayed and with dots being rendered as checkmarks in the indicator
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 08 Jul 2010 15:00:51 +0200
+
+appmenu-gtk (0.1.0-0ubuntu1) maverick; urgency=low
+
+  * New upstream version:
+    - Gimp: menu item missing
+    - [Master] Application is showing a partial menu
+    - [Master] Menu items are out of order.
+    - Firefox supposedly crashing with appmenu-gtk
+    - Weird sub-menu associated with Anjuta's File -> Quit entry
+    - doesn't display icons
+    - Tabs menu in gnome-terminal does not display correctly
+    - Pidgin menu items for accounts are not updated on 
+      the menubar when disabling them
+    - Dynamic menu is empty 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 06 Jul 2010 18:09:11 +0200
+
+appmenu-gtk (0.0.9-0ubuntu5) maverick; urgency=low
+
+  * src/bridge.c: clean some g_print calls there
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 02 Jul 2010 18:35:48 +0200
+
+appmenu-gtk (0.0.9-0ubuntu4) maverick; urgency=low
+
+  * Backport extra upstream fixes for softwares not working
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 02 Jul 2010 12:31:21 +0200
+
+appmenu-gtk (0.0.9-0ubuntu3) maverick; urgency=low
+
+  * Backport another set of upstream changes to fix crashing issues
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 29 Jun 2010 23:54:41 +0200
+
+appmenu-gtk (0.0.9-0ubuntu2) maverick; urgency=low
+
+  * Backport upstream commit to fix missing menu items issues (lp: #598623) 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Tue, 29 Jun 2010 10:42:00 +0200
+
+appmenu-gtk (0.0.9-0ubuntu1) maverick; urgency=low
+
+  * New upstream version:
+    - Fix bug #598244 - Unexpected separators in menus (lp: #598244)
+    - Fix bug #598311 - Missing menus and menu items (lp: #598311)
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 25 Jun 2010 20:20:12 +0200
+
+appmenu-gtk (0.0.9-0ubuntu1~ppa3) lucid; urgency=low
+
+  * Upping GTK dep and making version 0.0.9 clean
+
+ -- Ted Gould <ted@ubuntu.com>  Tue, 29 Jun 2010 11:46:57 -0500
+
+appmenu-gtk (0.0.9~dev-0ubuntu1~ppa2) lucid; urgency=low
+
+  * Version bump to 0.0.9 to follow the tip of trunk
+
+ -- David Barth <david.barth@canonical.com>  Tue, 29 Jun 2010 12:03:36 +0200
+
+appmenu-gtk (0.0.8-0ubuntu2) maverick; urgency=low
+
+  * Backport upstream r35 to fix some extra issues
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Thu, 24 Jun 2010 22:10:12 +0200
+
+appmenu-gtk (0.0.8-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+    - memset recurse to 0, then check for NULL before setting root.
+    - Fix for valid roots always.
+    - Skip duplicate separator menuitems (LP: #594867)
+    - Add support for shortcuts (LP: #591293)
+    - check that the boolean ubuntu-no-proxy exists before using a potential 
+      value to remove proxy support
+  * debian/control
+    - build build depends for libdbusmenu to >= 0.3.3
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 24 Jun 2010 13:53:20 -0400
+
+appmenu-gtk (0.0.7-0ubuntu2) maverick; urgency=low
+
+  * Backporting upstream commit to fix issues in unity 
+
+ -- Sebastien Bacher <seb128@ubuntu.com>  Fri, 18 Jun 2010 12:42:34 +0200
+
+appmenu-gtk (0.0.7-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 17 Jun 2010 16:39:13 -0400
+
+appmenu-gtk (0.0.6-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+    - Sets needed session variables in /etc/X11/Xsession.d
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 11 Jun 2010 11:47:35 -0400
+
+appmenu-gtk (0.0.5-0ubuntu1) maverick; urgency=low
+
+  * New upstream release
+  * debian/control
+    - build build-dep version for libgtk2.0-dev to >= 2.21.1-1ubuntu2
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 10 Jun 2010 17:30:03 -0400
+
+appmenu-gtk (0.0.4-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream release 
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Fri, 04 Jun 2010 13:47:36 -0400
+
+appmenu-gtk (0.0.3-0ubuntu1~ppa1) lucid; urgency=low
+
+  * New upstream version
+  * debian/control
+    - Added Vcs lings
+  * debian/copyright added
+  * debian/watch added
+
+ -- Ken VanDine <ken.vandine@canonical.com>  Thu, 27 May 2010 16:52:44 -0400
+
+appmenu-gtk (0.0.2~dev-0ubuntu1~ppa1) lucid; urgency=low
+
+  * Version bump to 0.0.2
+
+ -- Cody Russell <bratsche@gnome.org>  Wed, 26 May 2010 11:26:17 -0500
+
+appmenu-gtk (0.0.1~dev-0ubuntu1~ppa4) lucid; urgency=low
+
+  * Updates for the latest GtkMenuProxy interface.
+
+ -- Cody Russell <bratsche@gnome.org>  Wed, 26 May 2010 09:00:08 -0500
+
+appmenu-gtk (0.0.1~dev-0ubuntu1~ppa3) lucid; urgency=low
+
+  * debian/control: Adding libdbusmenu-gtk-dev to the dependency
+    list.
+
+ -- Ted Gould <ted@ubuntu.com>  Wed, 12 May 2010 16:44:47 +0200
+
+appmenu-gtk (0.0.1~dev-0ubuntu1~ppa2) lucid; urgency=low
+
+  * Fixing packaging to make it so there aren't two .so's
+
+ -- Ted Gould <ted@ubuntu.com>  Tue, 11 May 2010 13:30:04 +0200
+
+appmenu-gtk (0.0.1~dev-0ubuntu1~ppa1) lucid; urgency=low
+
+  * Initial release.
+
+ -- Ted Gould <ted@ubuntu.com>  Tue, 11 May 2010 13:18:19 +0200
